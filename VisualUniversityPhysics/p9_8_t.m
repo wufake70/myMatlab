@@ -1,0 +1,14 @@
+r=0:0.01:4;
+E0=1;
+U0=1;
+E1=E0*r.^2;
+E2=E0*pi./r.^2;
+U1=U0*pi*(1-r.^3);
+U2=pi*U0./r;
+figure
+subplot(2,1,1)
+plot(r(r<1),E1(r<1),r(r>1),E2(r>1));
+title('电场强度E')
+subplot(2,1,2)
+plot(r(r<1),U1(r<1),r(r>1),U2(r>1));
+title('电势U')
